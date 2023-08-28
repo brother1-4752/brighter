@@ -6,17 +6,41 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write --cache .",
+    "eslint": "eslint --quiet --fix --cache ."
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write --cache",
+      "eslint --quiet --fix --cache ."
+    ]
   },
   "dependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@react-three/drei": "^9.80.8",
+    "@react-three/fiber": "^8.13.7",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
-    "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
+    "leva": "^0.9.35",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "styled-components": "^6.0.7",
+    "styled-reset": "^4.5.1",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "@types/three": "^0.155.1",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.2"
   }
 }
