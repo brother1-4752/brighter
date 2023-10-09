@@ -43,7 +43,7 @@ export default function Home() {
         <button>제출</button>
       </form>
 
-      {/* {imgFile && <div>z</div>} */}
+      {imgFile && <div>z</div>}
     </div>
   )
 }
