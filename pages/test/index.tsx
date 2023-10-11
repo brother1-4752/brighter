@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 
-//TODO: 유저가 이미지 파일 업로드시, gltf 3d파일로 변환하고 노드 모델로 바꾸기
 const Home = () => {
   const [imageURL, setImageURL] = useState<string>('')
   const canvasRef = useRef<HTMLCanvasElement>(null)
